@@ -22,3 +22,15 @@
   id: StationRadioServerPort
   name: signal-port-name-radio-server
   description: signal-port-description-radio-server
+
+# Station Radio
+
+- type: sourcePort
+  id: VinylMusic
+  name: signal-port-name-vinyl-music
+  description: signal-port-description-vinyl-music
+
+- type: sourcePort
+  id: Microphone
+  name: signal-port-name-microphone
+  description: signal-port-description-microphone

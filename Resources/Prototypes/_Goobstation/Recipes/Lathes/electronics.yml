@@ -42,7 +42,7 @@
   parent: [ BaseCircuitboardRecipe ]
   id: VinylPlayerCircuitboard
   icon:
-    sprite:  _Goobstation/Structures/Machines/StationRadio/vinylplayer.rsi
+    sprite: _Goobstation/Structures/Machines/StationRadio/vinylplayer.rsi
     state: icon
   result: VinylPlayerCircuitboard
 
@@ -50,7 +50,7 @@
   parent: [ BaseCircuitboardRecipe ]
   id: TapeDeckCircuitboard
   icon:
-    sprite:  _Goobstation/Structures/Machines/StationRadio/tapedeck.rsi
+    sprite: _Goobstation/Structures/Machines/StationRadio/tapedeck.rsi
     state: icon
   result: TapeDeckCircuitboard
 
