@@ -16,7 +16,7 @@
   - FotA
 
 - type: accessGroup
-  id: FotAFotADoctor
+  id: FotADoctor
   tags:
   - FotA
   - FotADoctor 
