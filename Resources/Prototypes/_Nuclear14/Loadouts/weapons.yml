@@ -222,6 +222,29 @@
   items:
     - N14Hatchet
 
+
+
+- type: loadout
+  id: N14PoliceBaton
+  category: Weapons
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14PoliceBaton
+
+
+- type: loadout
+  id: N14TrenchClub
+  category: Weapons
+  cost: 2
+  requirements:
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
+  items:
+    - N14TrenchClub
+
 - type: loadout
   id: N14Machete
   category: Weapons
@@ -247,34 +270,24 @@
     - N14TribalSword
 
 - type: loadout
-  id: N14Machete
+  id: N14LongSword
   category: Weapons
   cost: 4
   requirements:
     - !type:CharacterItemGroupRequirement
       group: N14LoadoutMelee
   items:
-    - N14Machete
-
-- type: loadout
-  id: N14Machete
-  category: Weapons
-  cost: 4
-  requirements:
-    - !type:CharacterItemGroupRequirement
-      group: N14LoadoutMelee
-  items:
-    - N14Machete
+    - N14LongSword
 
 - type: loadout
   id: N14ChineseSword
   category: Weapons
   cost: 5
   requirements:
-    - !type:CharacterItemGroupRequirement
-      group: N14LoadoutMelee
-    - !type:CharacterTraitRequirement
+      - !type:CharacterTraitRequirement
       traits:
         - LanguageChinese
+    - !type:CharacterItemGroupRequirement
+      group: N14LoadoutMelee
   items:
     - N14ChineseSword
