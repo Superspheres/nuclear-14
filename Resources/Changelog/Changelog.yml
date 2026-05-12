@@ -4906,3 +4906,14 @@ Entries:
   id: 5867
   time: '2026-05-12T03:34:07.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/488
+- author: Vixting
+  changes:
+    - type: Add
+      message: >-
+        add x2 white shoes, chemist labcoat, chemist jumpsuit to vault chemist
+        locker
+    - type: Tweak
+      message: Replace vault chemist sterile gloves with chemist nitrile gloves
+  id: 5868
+  time: '2026-05-12T15:07:29.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/490
