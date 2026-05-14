@@ -5085,3 +5085,14 @@ Entries:
   id: 5886
   time: '2026-05-13T22:06:10.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/512
+- author: WazuraWasTaken
+  changes:
+    - type: Add
+      message: Ceremonial Sword and Goliath Fist for Centurion
+    - type: Add
+      message: Gladius to Loadouts
+    - type: Add
+      message: Cheaper Gladius and Longsword for Legion and Bos
+  id: 5887
+  time: '2026-05-14T00:11:10.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/483
