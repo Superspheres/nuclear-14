@@ -250,6 +250,7 @@
     - state: buggy_dune
     noRot: true
   - type: Vehicle
+    requiredHands: 2
     renderOver: None
     overlayPrototype: VehicleBuggyOverlay
     hornSound:

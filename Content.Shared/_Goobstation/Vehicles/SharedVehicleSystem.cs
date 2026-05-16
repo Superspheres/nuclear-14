@@ -12,6 +12,7 @@ using Content.Shared.Movement.Systems;
 using Robust.Shared.Audio;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
+using Content.Shared.Containers.ItemSlots;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Content.Shared.Weapons.Melee.Events;
