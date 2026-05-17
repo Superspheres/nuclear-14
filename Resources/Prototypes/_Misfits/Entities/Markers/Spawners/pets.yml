@@ -1,0 +1,13 @@
+﻿# Follower pet spawner
+
+- type: entity
+  parent: MisfitsPetSpawnerBase
+  id: MisfitsPetSpawnerRabbitFollowersPet
+  name: dr. thumper rabbit pet followers spawner
+  components:
+  - type: GhostRole
+    name: ghost-role-information-n14pet-rabbit-followers-name
+    description: ghost-role-information-n14pet-generic-description
+    rules: ghost-role-component-default-rules
+  - type: GhostRoleMobSpawner
+    prototype: MisfitsMobRabbitFollowersPet

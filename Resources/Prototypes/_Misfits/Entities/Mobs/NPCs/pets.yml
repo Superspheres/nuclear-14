@@ -1,0 +1,34 @@
+﻿
+- type: entity
+  name: Dr. Thumper
+  id: MisfitsMobRabbitFollowersPet
+  parent: N14MobRabbit
+  description: A highly trained professional.
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      200: Dead
+  - type: Tag
+    tags:
+    - FootstepSound
+    - DoorBumpOpener
+    - CannotSuicide
+  - type: Temperature
+    heatDamageThreshold: 800
+    coldDamageThreshold: 0
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      path: /Audio/Weapons/punch3.ogg
+    angle: 0
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 2.5
+  - type: MobPrice
+    price: 3000 # it is a truly valuable creature
+  - type: NpcFactionMember
+    factions:
+    - Followers
+    - SimpleMob

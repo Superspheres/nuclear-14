@@ -148,9 +148,9 @@
       amount: 2
 
 - type: entity
-  id: MisfitsShelfMetalNukaCola
+  id: MisfitsCrateBreakPlainNukaCola
   suffix: Filled, Nuka-Cola
-  parent: N14ShelfMetal
+  parent: N14CrateBreakPlain
   components:
   - type: StorageFill
     contents:

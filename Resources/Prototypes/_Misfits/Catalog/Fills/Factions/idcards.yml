@@ -54,6 +54,9 @@
     layers:
     - state: box
     - state: pda
+  whitelist:
+    components:
+    - NCRPrisonerBracelet
 
 - type: entity
   name: dog tag box
@@ -84,14 +87,15 @@
   components:
   - type: StorageFill
     contents:
-    - id: N14IDLegionaryBadgeSlave
-      amount: 4
     - id: NCClothingCollarLegionSlave
       amount: 4
   - type: Sprite
     layers:
     - state: box
     - state: pda
+  whitelist:
+    components:
+    - LegionSlaveCollar
 
 - type: entity
   name: followers ID card box

@@ -65,11 +65,8 @@
   components:
   - type: StorageFill
     contents:
+    - id: N14SackFertilizerFull
     - id: Bucket
-    - id: Bucket
-      prob: 0.5
-    - id: Bucket
-      prob: 0.5
     - id: N14HydroponicsToolHoe
     - id: N14HydroponicsToolShovel
     - id: N14HydroponicsToolClippers

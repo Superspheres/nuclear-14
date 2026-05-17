@@ -1,9 +1,9 @@
 ﻿# medical
 
 - type: entity
-  id: MisfitsShelfMetalMedsMedical
+  id: MisfitsCrateMedicalMedical
   suffix: Filled, Medical, NCR, BoS, Vault
-  parent: N14ShelfMetalMeds
+  parent: N14CrateMedical
   components:
   - type: StorageFill
     contents:
@@ -13,9 +13,9 @@
     - id: N14CleanGauze10
       amount: 3
     - id: Bloodpack
-      amount: 3
+      amount: 2
     - id: Brutepack
-      amount: 3
+      amount: 2
     - id: N14HandheldHealthAnalyzer
     - id: N14Antidote
     - id: N14ChemicalSyringeAntidote
@@ -26,9 +26,9 @@
       amount: 2
 
 - type: entity
-  id: MisfitsShelfWoodMedicalLegion
+  id: MisfitsCrateMedicalLegion
   suffix: Filled, Medical, Legion
-  parent: N14ShelfWood1
+  parent: CrateMedical
   components:
   - type: StorageFill
     contents:
