@@ -5552,3 +5552,14 @@ Entries:
   id: 5931
   time: '2026-05-22T23:37:29.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/573
+- author: sssaaagggeee
+  changes:
+    - type: Tweak
+      message: NCR Doctor now requires NCR doctor playtime to rank up
+    - type: Tweak
+      message: NCR Medic now requires NCR medic playtime to rank up
+    - type: Tweak
+      message: NCR medic promotions are now E3 -> E4 -> E5
+  id: 5932
+  time: '2026-05-22T23:39:15.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/570
