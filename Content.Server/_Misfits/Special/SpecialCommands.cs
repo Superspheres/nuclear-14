@@ -33,6 +33,12 @@ public sealed class SpecialGetCommand : IConsoleCommand
         }
 
         var specialSystem = _entities.System<SharedSpecialSystem>();
+        if (!specialSystem.UsesSpecialStats(target.Value))
+        {
+            shell.WriteError("Target cannot use SPECIAL stats.");
+            return;
+        }
+
         if (!_entities.TryGetComponent<SpecialComponent>(target.Value, out var special))
         {
             shell.WriteError("Target has no SpecialComponent.");
@@ -111,6 +117,12 @@ public sealed class SpecialSetCommand : IConsoleCommand
         }
 
         var specialSystem = _entities.System<SharedSpecialSystem>();
+        if (!specialSystem.UsesSpecialStats(target.Value))
+        {
+            shell.WriteError("Target cannot use SPECIAL stats.");
+            return;
+        }
+
         var special = _entities.EnsureComponent<SpecialComponent>(target.Value);
         if (!specialSystem.TrySetBase(target.Value, stat, value, special))
         {
@@ -267,6 +279,12 @@ public sealed class SpecialModCommand : IConsoleCommand
 
         var source = args.Length >= 5 ? args[4] : "admin";
         var specialSystem = _entities.System<SharedSpecialSystem>();
+        if (!specialSystem.UsesSpecialStats(target.Value))
+        {
+            shell.WriteError("Target cannot use SPECIAL stats.");
+            return;
+        }
+
         var special = _entities.EnsureComponent<SpecialComponent>(target.Value);
 
         if (!specialSystem.TryModifyTemporary(target.Value, stat, modifier, duration, source, special))

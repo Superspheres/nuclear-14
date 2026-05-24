@@ -1,6 +1,7 @@
 using Content.Shared._Misfits.Special.Components;
 using Content.Shared._Misfits.Special.Prototypes;
 using Content.Shared.Chemistry;
+using Content.Shared.Ghost;
 using Content.Shared.Movement.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -83,11 +84,21 @@ public sealed class SharedSpecialSystem : EntitySystem
     }
 
     /// <summary>
+    /// Returns whether this entity should participate in SPECIAL gameplay effects.
+    /// </summary>
+    public bool UsesSpecialStats(EntityUid uid)
+    {
+        // Observer ghosts may be player-controlled, but they should not inherit
+        // character SPECIAL gates, bonuses, or penalties.
+        return !HasComp<GhostComponent>(uid);
+    }
+
+    /// <summary>
     /// Gets the character's saved stat value before temporary modifiers.
     /// </summary>
     public int GetBase(EntityUid uid, SpecialStat stat, SpecialComponent? component = null)
     {
-        if (!SpecialStats.IsEnabled(stat))
+        if (!SpecialStats.IsEnabled(stat) || !UsesSpecialStats(uid))
             return SpecialProfile.DefaultValue;
 
         if (!Resolve(uid, ref component, false))
@@ -101,7 +112,7 @@ public sealed class SharedSpecialSystem : EntitySystem
     /// </summary>
     public int GetModifier(EntityUid uid, SpecialStat stat, SpecialComponent? component = null)
     {
-        if (!SpecialStats.IsEnabled(stat))
+        if (!SpecialStats.IsEnabled(stat) || !UsesSpecialStats(uid))
             return 0;
 
         if (!Resolve(uid, ref component, false))
@@ -115,7 +126,7 @@ public sealed class SharedSpecialSystem : EntitySystem
     /// </summary>
     public int GetUnclampedEffective(EntityUid uid, SpecialStat stat, SpecialComponent? component = null)
     {
-        if (!SpecialStats.IsEnabled(stat))
+        if (!SpecialStats.IsEnabled(stat) || !UsesSpecialStats(uid))
             return SpecialProfile.DefaultValue;
 
         if (!Resolve(uid, ref component, false))
@@ -204,12 +215,15 @@ public sealed class SharedSpecialSystem : EntitySystem
 
     public bool HasRequirement(EntityUid uid, SpecialStat stat, int minimum, SpecialComponent? component = null)
     {
-        return GetEffective(uid, stat, component) >= minimum;
+        return UsesSpecialStats(uid) && GetEffective(uid, stat, component) >= minimum;
     }
 
     public bool TrySetBase(EntityUid uid, SpecialStat stat, int value, SpecialComponent? component = null)
     {
-        if (!SpecialStats.IsEnabled(stat) || !SpecialProfile.IsWithinBounds(value) || !Resolve(uid, ref component, false))
+        if (!UsesSpecialStats(uid) ||
+            !SpecialStats.IsEnabled(stat) ||
+            !SpecialProfile.IsWithinBounds(value) ||
+            !Resolve(uid, ref component, false))
             return false;
 
         SetBase(component, stat, value);
@@ -224,7 +238,7 @@ public sealed class SharedSpecialSystem : EntitySystem
         // profile before copying it into the runtime component.
         profile = SpecialProfile.EnsureValid(profile);
 
-        if (!Resolve(uid, ref component, false))
+        if (!UsesSpecialStats(uid) || !Resolve(uid, ref component, false))
             return false;
 
         component.BaseStrength = profile.Strength;
@@ -249,7 +263,10 @@ public sealed class SharedSpecialSystem : EntitySystem
         string source = "",
         SpecialComponent? component = null)
     {
-        if (modifier == 0 || !SpecialStats.IsEnabled(stat) || !Resolve(uid, ref component, false))
+        if (modifier == 0 ||
+            !UsesSpecialStats(uid) ||
+            !SpecialStats.IsEnabled(stat) ||
+            !Resolve(uid, ref component, false))
             return false;
 
         // The component stores the aggregate modifier per stat; this list stores
@@ -293,7 +310,7 @@ public sealed class SharedSpecialSystem : EntitySystem
 
     public SpecialProfile ToProfile(EntityUid uid, SpecialComponent? component = null)
     {
-        if (!Resolve(uid, ref component, false))
+        if (!UsesSpecialStats(uid) || !Resolve(uid, ref component, false))
             return SpecialProfile.Default();
 
         return new SpecialProfile
