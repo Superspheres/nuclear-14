@@ -5677,3 +5677,10 @@ Entries:
   id: 5943
   time: '2026-05-25T01:22:53.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/590
+- author: twoinfinityifotyoes
+  changes:
+    - type: Add
+      message: Added Vault Riot Helm Texture
+  id: 5944
+  time: '2026-05-25T01:32:27.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/592
