@@ -101,6 +101,8 @@ job-name-follower-head = Followers Head
 job-description-follower-head = You lead this chapter of the Followers. The sick, the curious, and the desperate look to you for direction. Set the example, protect your people, and keep the mission alive.
 job-name-follower-doctor = Followers Doctor
 job-description-follower-doctor = You are a trained Follower physician. Stitch the wounded, study the wastes, and push medicine into places NCR and Brotherhood dare not go.
+job-name-follower-guard = Followers Guard
+job-description-follower-guard = You protect the Followers' clinic, escort doctors into dangerous ground, and keep desperate people from turning the humanitarian mission into another battlefield.
 job-name-follower-volunteer = Followers Volunteer
 job-description-follower-volunteer = You are new to the Followers. You believe knowledge and compassion can outlast bullets and bombs. Prove it — learn from those above you and help anyone who needs it.
 

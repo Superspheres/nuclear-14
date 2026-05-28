@@ -736,6 +736,19 @@
 
 - type: entity
   parent: N14IDDoctor
+  id: N14IDFollowerGuard
+  name: followers (guard) ID
+  description: An ID card worn by the Followers of the Apocalypse.
+  components:
+  - type: Tag
+    tags:
+    - IdCardFollowers
+  - type: Access
+    tags:
+    - FotA
+
+- type: entity
+  parent: N14IDDoctor
   id: N14IDFollowerHead
   name: followers (head) ID
   description: An ID card worn by the Followers of the Apocalypse.

@@ -114,6 +114,7 @@
         - VaultDoctor
         - FollowerHead    # #Misfits Change - Followers job replaced by ranked hierarchy
         - FollowerDoctor
+        - FollowerGuard
         - FollowerVolunteer
   functions:
     - !type:TraitAddComponent

@@ -809,6 +809,14 @@
 
 - type: entity
   parent: N14SpawnPointFollowers
+  id: MisfitsSpawnPointFollowerGuard
+  name: follower guard
+  components:
+  - type: SpawnPoint
+    job_id: FollowerGuard
+
+- type: entity
+  parent: N14SpawnPointFollowers
   id: MisfitsSpawnPointFollowerHead
   name: follower head
   components:
