@@ -6086,3 +6086,16 @@ Entries:
   id: 5984
   time: '2026-05-29T19:07:34.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/635
+- author: Vixting
+  changes:
+    - type: Fix
+      message: removed turbo charged cow
+    - type: Tweak
+      message: >-
+        Followers that are rideable can only be directed by their commander now,
+        if you aren't the commander you can only ride them but not direct them.
+        So you can still ride on them but they will stay following / listening
+        to the commander instead of you
+  id: 5985
+  time: '2026-05-29T19:09:52.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/636
