@@ -6387,3 +6387,22 @@ Entries:
   id: 6010
   time: '2026-06-02T20:14:41.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/655
+- author: Squagg
+  changes:
+    - type: Fix
+      message: >-
+        Fixed Enclave characters being incorrectly targeted by hostile robots
+        while preserving hostility from other NPC factions.
+    - type: Fix
+      message: Made Enclave holotags visible in the entity spawn menu.
+    - type: Add
+      message: >-
+        Added Enclave TacMap, night vision, and thermal vision support to
+        Enclave power armor helmets.
+    - type: Add
+      message: Added Enclave-locked doors and mapper tools for Enclave base mapping.
+    - type: Fix
+      message: Makes N14Paper burnable.
+  id: 6011
+  time: '2026-06-03T20:27:01.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/675
