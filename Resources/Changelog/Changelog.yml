@@ -6436,3 +6436,10 @@ Entries:
   id: 6015
   time: '2026-06-04T00:54:14.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/681
+- author: qevie
+  changes:
+    - type: Fix
+      message: faction civillian descriptions
+  id: 6016
+  time: '2026-06-04T02:43:28.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/684
