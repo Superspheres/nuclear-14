@@ -74,6 +74,7 @@
   - type: Perishable
     rotAfter: 3600
   - type: Hunger
+    baseDecayRate: 0.024 # #Misfits Add - 3x human default (0.008) to reflect massive size / accelerated metabolism
     starvationDamage:
       types:
         Cold: 0.15 # Misfits Change - use Cold damage for Malnutrition instead of custom Starvation type (no brute/bleed from hunger)
