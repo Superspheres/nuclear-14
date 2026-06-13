@@ -6889,3 +6889,10 @@ Entries:
   id: 6056
   time: '2026-06-13T00:14:48.0000000+00:00'
   url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/772
+- author: Cythisiax
+  changes:
+    - type: Add
+      message: Gun & meleeweapon blacklist to parent N14MobPetCat.
+  id: 6057
+  time: '2026-06-13T17:04:22.0000000+00:00'
+  url: https://github.com/Misfit-Sanctuary/nuclear-14/pull/776
